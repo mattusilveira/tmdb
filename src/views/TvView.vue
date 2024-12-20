@@ -64,8 +64,8 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
   @click="openTV(tv.id)"
 />
       <div class="tv-details">
-        <p class="tv-title">{{ tv.title }}</p>
-        <p class="tv-release-date">{{ formatDate(tv.release_date) }}</p>
+        <p class="tv-title">{{ tv.name }}</p>
+        <p class="tv-release-date">{{ formatDate(tv.first_air_date) }}</p>
         <p class="tv-genres">
           <span
             v-for="genre_id in tv.genre_ids"
@@ -82,6 +82,9 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
 </template>
 
 <style scoped>
+.tv-title, .tv-release-date {
+  color: #fff;
+}
 .genre-list {
   display: flex;
   justify-content: center;
@@ -89,7 +92,7 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
   gap: 2rem;
   list-style: none;
   margin-bottom: 2rem;
-  margin-top: 10px;
+  margin-top: 7rem;
 }
 
 .genre-item {
@@ -97,17 +100,21 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
   border-radius: 1rem;
   padding: 0.5rem 2rem;
   color: #fff;
+  transition: ease 200ms;
 }
 
 .genre-item:hover {
   cursor: pointer;
-  background-color: #4e9e5f;
-  box-shadow: 0 0 0.5rem #387250;
+  background-color: #ffffff;
+  color: black;
+  box-shadow: 0 0 0.5rem #000000;
 }
 .tv-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .tv-card {
@@ -145,27 +152,29 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
 }
 
 .tv-genres span {
-  background-color: #748708;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
-  color: #fff;
+  color: #000000;
   font-size: 0.8rem;
   font-weight: bold;
 }
 
 .tv-genres span:hover {
   cursor: pointer;
-  background-color: #455a08;
-  box-shadow: 0 0 0.5rem #748708;
+  background-color: #000000;
+  box-shadow: 0 0 0.5rem #ffffff;
+  color: #fff;
 }
 .active {
-  background-color: #67b086;
+  background-color: #ffffff;
+  color: black;
   font-weight: bolder;
 }
 
 .tv-genres span.active {
-  background-color: #abc322;
-  color: #000;
+  background-color: #000000;
+  color: #fff;
   font-weight: bolder;
 }
 </style>
