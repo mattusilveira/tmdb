@@ -21,11 +21,11 @@ onMounted(() => {
 .container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 3rem;
 }
 .releases-movies {
-    transition: 200ms ease;
+    transition: 300ms ease;
     cursor: pointer;
 }
 .releases-movies:hover {

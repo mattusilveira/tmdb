@@ -89,18 +89,18 @@ const formatDate = (date) => new Date(date).toLocaleDateString('pt-BR')
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 0.5rem;
   list-style: none;
   margin-bottom: 2rem;
   margin-top: 7rem;
+  background-color: rgb(20, 20, 20);
 }
 
 .genre-item {
-  background-color: #000000;
-  border-radius: 1rem;
+  background-color: #616161;
   padding: 0.5rem 2rem;
-  color: #fff;
-  transition: ease 200ms;
+  color: #ffffff;
+  transition: 200ms ease;
 }
 
 .genre-item:hover {
